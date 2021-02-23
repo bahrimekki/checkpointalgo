@@ -1,0 +1,51 @@
+ALGORITHM algorithm_1
+VAR
+    sentence : STRING:="BAHRI mekki.";
+    lgh : INTEGER:=0;
+    nbwords : INTEGER:=1;
+    nbvowels : INTEGER:=0;
+
+BEGIN
+
+    WHILE (sentence[lgh] != '.') DO
+/*----------------Total number of words in a string:-------------------*/
+        IF(sentence[lgh] == ' ') THEN 
+            nbwords := nbwords + 1;
+/*----------------Total number of voxels in a string:-------------------*/
+        ELSE_IF(sentence[lgh] == 'a') THEN
+            nbvowels := nbvowels + 1;
+        ELSE_IF (sentence[lgh] == 'e') THEN
+            nbvowels := nbvowels + 1;
+        ELSE_IF (sentence[lgh] == 'i') THEN
+            nbvowels := nbvowels + 1;
+        ELSE_IF (sentence[lgh] == 'o') THEN 
+            nbvowels := nbvowels + 1; 
+        ELSE_IF (sentence[lgh] == 'u') THEN
+            nbvowels := nbvowels + 1 
+        ELSE_IF (sentence[lgh] == 'y') THEN 
+            nbvowels := nbvowels + 1
+        ELSE_IF (sentence[lgh] == 'A') THEN
+            nbvowels := nbvowels + 1;
+        ELSE_IF (sentence[lgh] == 'E') THEN
+            nbvowels := nbvowels + 1;
+        ELSE_IF (sentence[lgh] == 'I') THEN
+            nbvowels := nbvowels + 1;
+        ELSE_IF (sentence[lgh] == 'O') THEN 
+            nbvowels := nbvowels + 1; 
+        ELSE_IF (sentence[lgh] == 'U') THEN
+            nbvowels := nbvowels + 1 
+        ELSE_IF (sentence[lgh] == 'Y') THEN 
+            nbvowels := nbvowels + 1
+        ELSE
+            nbwords := nbwords
+            nbvowels := nbvowels
+        END_IF
+/*----------------Total number of characters in a string:-------------------*/
+        lgh := lgh + 1;
+    END_WHILE
+
+    Write("Total number of characters in a string: ", lgh);
+    Write("Total number of words in a string: ", nbwords);
+    Write("Total number of vowels in a string: ", nbvowels);
+
+END
